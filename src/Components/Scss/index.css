@@ -1,0 +1,44 @@
+header {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar {
+  min-height: 10vh;
+  width: 100%;
+  gap: 50px;
+}
+.navbar .logo span {
+  font-size: 22px;
+  padding-left: 2px;
+  font-weight: 700;
+}
+.navbar .logo i {
+  background-color: var(--primary);
+  padding: 5px 5px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.navbar .navbar .search-bar {
+  position: relative;
+}
+.navbar .navbar .search-bar input {
+  width: 500px;
+  min-height: 48px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 0 0 24px;
+  z-index: 1;
+  border: none;
+  background-color: var(--half-light);
+  outline: none;
+}
+.navbar .navbar .search-bar i {
+  position: absolute;
+  right: 30px;
+  color: var(--dark);
+  top: 16px;
+  font-size: 20px;
+}/*# sourceMappingURL=index.css.map */

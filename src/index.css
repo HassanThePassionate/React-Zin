@@ -1,0 +1,124 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Utility */
+.flex-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bg-primary {
+  background-color: #4866e2;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.text-primary {
+  color: #4866e2;
+}
+
+.text-light {
+  color: #fff;
+}
+
+.lg {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #121212;
+  font-family: "Inter", sans-serif;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  border: none;
+  margin-left: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  /* grid-template-columns: repeat(5,1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-align: left;
+}
+.card p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(60, 60, 67, 0.6);
+  font-family: "Inter", sans-serif;
+}
+.card i {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-top: 15px;
+  color: #e28d67;
+}
+.card h3 {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #121212;
+  font-family: "Inter", sans-serif;
+}
+.card img {
+  width: 65px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1425px;
+  padding: 0 16px;
+  width: 100%;
+} /*# sourceMappingURL=index.css.map */
