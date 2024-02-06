@@ -33,6 +33,7 @@ const Navbar = () => {
                             <button className="btn bg-light">Login</button>
                             <button className="btn purple bg-primary">Sign Up</button>
                         </div>
+                        <i class="fa-solid fa-bars" id='menu'></i>
                     </nav>
 
                     <section className="crumber">
