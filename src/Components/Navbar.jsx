@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Scss/index.scss';
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
+    const [searchValue, setSearchValue] = useState('');
+
+    const handleSearchInputChange = (event) => {
+        setSearchValue(event.target.value);
+        onSearch(event.target.value);
+    };
 
     return (
         <>
@@ -21,7 +27,8 @@ const Navbar = () => {
                                     name="search"
                                     className="search"
                                     placeholder="Search for Movie, TV Shows, Themes & Cast"
-
+                                    value={searchValue}
+                                    onChange={handleSearchInputChange}
                                 />
                                 <button type="submit" className="search-button">
                                     <i className="fa-solid fa-magnifying-glass"></i>
@@ -33,7 +40,7 @@ const Navbar = () => {
                             <button className="btn bg-light">Login</button>
                             <button className="btn purple bg-primary">Sign Up</button>
                         </div>
-                        <i class="fa-solid fa-bars" id='menu'></i>
+                        <i className="fa-solid fa-bars" id='menu'></i>
                     </nav>
 
                     <section className="crumber">

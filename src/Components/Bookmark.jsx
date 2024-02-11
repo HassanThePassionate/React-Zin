@@ -1,32 +1,48 @@
 import React from 'react'
 
-const Bookmark = () => {
+const Bookmark = ({ searchValue }) => {
+    const filterCards = (cards) => {
+        return cards.filter(card => card.title.toLowerCase().includes(searchValue.toLowerCase()));
+    };
+
+    // Your card data
+    const cards = [
+        {
+            title: 'Edit PDF',
+            img: 'https://images.hipdf.com/images2022/icons/editPDF.svg',
+            des: 'Use the best online tool to edit PDFs in your brower.'
+        },
+        {
+            title: 'Crop PDF',
+            img: 'https://images.hipdf.com/images2022/icons/Crop-PDF.svg',
+            des: 'Crop PDF online to Selected area, adjust margin size...'
+        },
+        {
+            title: 'Replace Text',
+            img: 'https://images.hipdf.com/images2022/icons/replace-text-pdf.svg',
+            des: 'The easiest way to replace text online.'
+        },
+        {
+            title: 'Rotate PDF',
+            img: 'https://images.hipdf.com/images2022/icons/Rotate-PDF.svg',
+            des: 'Rotate and Save your PDF page online for file.'
+        },
+    ];
+
+    const filteredCards = searchValue ? filterCards(cards) : cards;
     return (
         <>
             <section className="bookmarks">
                 <div className="container">
                     <h1 className="lg">Your Bookmarks</h1>
                     <div className="cards">
-                        <div className="card">
-                            <img src="https://images.hipdf.com/images2022/icons/editPDF.svg" alt="img" />
-                            <h3>Edit PDF</h3>
-                            <p>Use the best online tool to edit PDFs in your brower.</p>
-                        </div>
-                        <div className="card">
-                            <img src="https://images.hipdf.com/images2022/icons/Crop-PDF.svg" alt="img" />
-                            <h3>Crop PDF</h3>
-                            <p>Crop PDF online to Selected area, adjust margin size... </p>
-                        </div>
-                        <div className="card">
-                            <img src="https://images.hipdf.com/images2022/icons/replace-text-pdf.svg" alt="img" />
-                            <h3>Replace Text</h3>
-                            <p>The easiest way to replace text online.</p>
-                        </div>
-                        <div className="card">
-                            <img src="https://images.hipdf.com/images2022/icons/Rotate-PDF.svg" alt="img" />
-                            <h3>Rotate PDF</h3>
-                            <p>Rotate and Save your PDF page online for file.</p>
-                        </div>
+                        {filteredCards.map((card, index) => (
+                            <div className="card" key={index}>
+                                <img src={card.img} alt="img" />
+                                <h3>{card.title}</h3>
+                                <p>{card.des}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

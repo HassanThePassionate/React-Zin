@@ -1,35 +1,36 @@
-import React from 'react';
+import React from 'react'
 
-const Converter = ({ searchValue }) => {
+const CPDF = ({ searchValue }) => {
+
     const filterCards = (cards) => {
         return cards.filter(card => card.title.toLowerCase().includes(searchValue.toLowerCase()));
     };
 
     const cards = [
         {
-            title: 'PDF to Word',
-            img: 'https://images.hipdf.com/images2022/icons/pdf-word.svg',
-            des: 'Easily Convert PDF to Word document.'
+            title: 'Word to PDF',
+            img: 'https://images.hipdf.com/images2022/icons/word-pdf.svg',
+            des: 'The best Word to PDF converter online.'
         },
         {
-            title: 'PDF to PPT',
-            img: 'https://images.hipdf.com/images2022/icons/PDF-PPT.svg',
-            des: 'Convert PDF to Powerpoint online.'
+            title: 'PPT to PDF',
+            img: 'https://images.hipdf.com/images2022/icons/PPT-PDF.svg',
+            des: 'Convert Powerpoint to PDF online.'
         },
         {
-            title: 'PDF to Excel',
-            img: 'https://images.hipdf.com/images2022/icons/pdf-excel.svg',
-            des: 'Convert PDF to Excel for Free.'
+            title: 'Excel to PDF',
+            img: 'https://images.hipdf.com/images2022/icons/Excel-PDF.svg',
+            des: 'Easily Convert Excel spreadsheet to PDF'
         },
         {
-            title: 'PDF to JPG',
-            img: 'https://images.hipdf.com/images2022/icons/PDF-JPG.svg',
-            des: 'Convert PDF files top a set of optimized JPG,PNG,BPM, G...'
+            title: 'JPG to PDF',
+            img: 'https://images.hipdf.com/images2022/icons/jpg-pdf.svg',
+            des: 'Convert JPG,PNG,BPM, GIF,and TIFF images to PDF'
         },
         {
-            title: 'PDF to TXT ',
-            img: 'https://images.hipdf.com/images2022/icons/PDF-TXT.svg',
-            des: 'Convert your PDF to TXT, and extract text from your PDF.'
+            title: 'TXT to PDF ',
+            img: 'https://images.hipdf.com/images2022/icons/Image-in-TXT.svg',
+            des: 'Convert TXT to PDF online for free.'
         },
     ];
 
@@ -51,7 +52,7 @@ const Converter = ({ searchValue }) => {
                 </div>
             </section>
         </>
-    );
-};
+    )
+}
 
-export default Converter;
+export default CPDF
