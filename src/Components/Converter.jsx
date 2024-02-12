@@ -39,14 +39,22 @@ const Converter = ({ searchValue }) => {
             <section className="converter">
                 <div className="container">
                     <h1 className="lg">Convert from PDF</h1>
+
                     <div className="cards">
-                        {filteredCards.map((card, index) => (
-                            <div className="card" key={index}>
-                                <img src={card.img} alt="img" />
-                                <h3>{card.title}</h3>
-                                <p>{card.des}</p>
+                        {filteredCards.length > 0 ? (
+                            filteredCards.map((card, index) => (
+                                <div className="card" key={index}>
+                                    <img src={card.img} alt="img" />
+                                    <h3>{card.title}</h3>
+                                    <p>{card.des}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="no-results">
+
+                                <p>Nothing found</p>
                             </div>
-                        ))}
+                        )}
                     </div>
                 </div>
             </section>

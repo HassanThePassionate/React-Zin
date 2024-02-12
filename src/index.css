@@ -3,9 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 html,
@@ -57,7 +55,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   color: #121212;
-  font-family: "Inter", sans-serif;
 }
 
 .btn {
@@ -91,7 +88,6 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: rgba(60, 60, 67, 0.6);
-  font-family: "Inter", sans-serif;
 }
 .card i {
   font-size: 30px;
@@ -105,7 +101,6 @@ body {
   font-size: 20px;
   line-height: 120%;
   color: #121212;
-  font-family: "Inter", sans-serif;
 }
 .card img {
   width: 65px;
@@ -120,4 +115,39 @@ body {
   max-width: 1425px;
   padding: 0 16px;
   width: 100%;
-} /*# sourceMappingURL=index.css.map */
+}
+
+#menu {
+  display: none;
+  border: 2px solid black;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1105px) {
+  .crumber {
+    display: none;
+  }
+}
+@media screen and (max-width: 1052px) {
+  .search-bar, .btns {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  .footer-logo {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0px 10px;
+    max-width: 200px;
+    padding: 0 5px;
+    width: 100%;
+  }
+  #bookmark {
+    padding: 0px;
+  }
+}/*# sourceMappingURL=index.css.map */
